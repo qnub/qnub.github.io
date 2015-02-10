@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="window" lang="{{ DEFAULT_LANG }}" prefix="ya: https://webmaster.yandex.ru/vocabularies/" prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website# {% block og_prefixes %}{% endblock %}" {% block head_prefixes %}{% endblock %}>
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+            <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+            <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css"/>
+            <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" />
+            <link rel='icon' type='image/x-icon' href='{{ SITEURL }}/favicon.ico'/>
+            <link rel="apple-touch-icon-precomposed" href="{{ SITEURL }}/favicon.png">
+
+
+            {# {% if FEED_ALL_ATOM %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} полный Atom Feed" />
+            {% endif %}
+            {% if FEED_ALL_RSS %} #}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} полный RSS Feed" />
+            {# {% endif %}
+            {% if FEED_ATOM %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+            {% endif %}
+            {% if FEED_RSS %}
+                <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+            {% endif %} #}
+            {# {% if CATEGORY_FEED_ATOM and category %}
+                <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed раздела &quot;{{category|cat_name}}&quot;" />
+            {% endif %} #}
+            {% if CATEGORY_FEED_RSS and category %}
+                <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed раздела &quot;{{category|cat_name}}&quot;" />
+            {% endif %}
+            {# {% if TAG_FEED_ATOM and tag %}
+                <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed тега &quot;{{tag}}&quot;" />
+            {% endif %}
+            {% if TAG_FEED_RSS and tag %}
+                <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed тега &quot;{{tag}}&quot;" />
+            {% endif %} #}
+            <meta property="og:site_name" content="{{ SITENAME }}" />
+            <meta property="og:locale" content="{{ DEFAULT_LANG }}" />
+            {% block og_type %}
+                <meta property="og:type" content="website" />
+            {% endblock %}
+
+        {% endblock head %}
+    </head>
+    <body class="page">
+
+        <header class="header">
+            <h1 class="header__logo"><a href="{{SITEURL}}" class="header__logo-link">qnub</a></h1>
+            <nav class="header__menu">
+                {% if MENUITEMS %}
+                    {% for item in MENUITEMS %}
+                        <a
+                            href="{{SITEURL}}{{item.1}}"
+                            class="header__menu-item {% if item.0 == category %} header__menu-item_active {% endif %}">{{item.2}}</a>
+                    {% endfor %}
+                {% endif %}
+                {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                        <a
+                            href="{{SITEURL}}/{{cat.url}}"
+                            class="header__menu-item {% if cat == category %} header__menu-item_active {% endif %}">{{ cat|cat_name|title }}</a>
+                    {% endfor %}
+                {% endif %}
+                <a
+                    href="{{SITEURL}}/archives.html"
+                    class="header__menu-item {% if output_file == "archives.html" %} header__menu-item_active {% endif %}">Архив</a>
+                {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for page in PAGES %}
+                        <a
+                            href="{{ SITEURL }}/{{ page.url }}"
+                            class="header__menu-item {% if output_file == page.url %} header__menu-item_active {% endif %}">{{ page.title }}</a>
+                    {% endfor %}
+                {% endif %}
+            </nav>
+        </header>
+
+        <div class="container cf">
+            <main class="content">
+
+                {%- block content -%}{%- endblock %}
+
+            </main>
+
+            <aside class="sidebar">
+                {% include 'sidebar.html' %}
+            </aside>
+        </div>
+
+        <footer class="footer">
+            {# <a href="http://feeds.feedburner.com/gikme" class="footer__link link">RSS подкаста</a>
+            <a href="http://feeds.feedburner.com/gikmeblog" class="footer__link link">RSS подкаста вместе с невошедшим</a> #}
+        </footer>
+        {% if DISQUS_SITENAME %}
+            <script type="text/javascript">
+                var disqus_shortname = '{{ DISQUS_SITENAME }}';
+                (function () {
+                    var s = document.createElement('script'); s.async = true;
+                    s.type = 'text/javascript';
+                    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                }());
+            </script>
+        {% endif %}
+        <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery.fluidbox.min.js"></script>
+        <script type="text/javascript" src="{{ SITEURL }}/theme/js/main.js"></script>
+        {% include 'analytics.html' %}
+    </body>
+</html>
