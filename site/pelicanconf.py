@@ -74,3 +74,5 @@ CATEGORY_MAP = {
 # MENUITEMS = (
 #     ('news', '/category/news.html', u'Новости'),
 # )
+
+# DISQUS_SITENAME = ""

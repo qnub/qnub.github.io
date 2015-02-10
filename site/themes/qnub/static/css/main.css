@@ -703,6 +703,32 @@ table {
   -webkit-transition: opacity 0;
           transition: opacity 0;
 }
+.dsq-widget-list {
+  margin: 0;
+  padding: 0;
+}
+.dsq-widget-item {
+  background: #fff;
+  padding: 10px;
+}
+.dsq-widget-user {
+  color: #3871b8;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.dsq-widget-user:hover {
+  color: #1bb833;
+}
+.dsq-widget-user:active {
+  color: #0a2c57;
+}
+.dsq-widget-comment {
+  display: block;
+  clear: both;
+  margin: 10px 0;
+  font-family: "Noto Serif", serif;
+  font-size: 12px;
+}
 .window {
   background: #f1f1f9;
   min-height: 100%;

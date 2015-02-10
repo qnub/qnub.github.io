@@ -20,6 +20,6 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-DISQUS_SITENAME = "qnubblog"
+DISQUS_SITENAME = "qnub"
 GOOGLE_ANALYTICS = "UA-59564142-1"
 YANDEX_METRIKA = 28356266
