@@ -498,6 +498,11 @@ table {
   border: 0;
   color: #3a3e41;
 }
+.header__search {
+  width: 220px;
+  float: right;
+  margin-left: 20px;
+}
 .page {
   min-height: 100%;
   color: #3a3e41;
