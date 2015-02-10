@@ -1,4 +1,4 @@
-Title: Хостинг на GitHub блога, сгенерированного Pelican  
+Title: Бесплатный хостинг на GitHub блога, сгенерированного Pelican  
 Date: 2015-02-10 15:00:00 
 Category: blog  
 Tags: blog, github, static, pelican  
