@@ -15,13 +15,13 @@ JINJA_FILTERS = {
 
 AUTHOR = u'qnub'
 SITENAME = u"qnub's blog"
-SITEURL = 'http://qnub.ru'
+SITEURL = 'http://qnub.me'
 
 PATH = 'content'
 
 TIMEZONE = 'Asia/Omsk'
 
-DEFAULT_LANG = u'ru'
+DEFAULT_LANG = u'ru_RU'
 
 STATIC_PATHS = ['images', 'extra/robots.txt', 'extra/favicon.png', 'extra/favicon.ico', 'extra/CNAME']
 EXTRA_PATH_METADATA = {
@@ -38,6 +38,8 @@ PLUGINS = ['feeds_with_media', ]
 THEME = './themes/qnub'
 
 # Feed generation is usually not desired when developing
+FEED_DOMAIN = SITEURL
+FEED_MAX_ITEMS = 15
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -47,7 +49,7 @@ AUTHOR_FEED_RSS = None
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
 USE_FOLDER_AS_CATEGORY = False
-DEFAULT_CATEGORY = 'text'
+DEFAULT_CATEGORY = 'blog'
 DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 DELETE_OUTPUT_DIRECTORY = True
 
