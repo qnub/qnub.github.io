@@ -59,6 +59,7 @@ PAGE_ORDER_BY = 'order'
 DEFAULT_PAGINATION = 10
 
 RELATIVE_URLS = True
+TYPOGRIFY = True
 
 FEED_IMAGE = '/favicon.png'
 FEED_FOOTER = ''
@@ -68,7 +69,7 @@ CATEGORY_MAP = {
     'text': u'текст',
     'blog': u'блог',
     'news': u'новости',
-    'article': u'статьи',
+    'article': u'статьи'
 }
 
 # MENUITEMS = (

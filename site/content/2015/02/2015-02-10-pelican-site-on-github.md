@@ -1,7 +1,7 @@
 Title: Бесплатный хостинг на GitHub блога, сгенерированного Pelican  
 Date: 2015-02-10 15:00:00 
 Category: blog  
-Tags: blog, github, static, pelican  
+Tags: github, static, pelican  
 Author: qnub  
 Image: /images/blog/pelican.png
 Slug: 2015-02-10-pelican-site-on-github
