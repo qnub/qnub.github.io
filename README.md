@@ -1,1 +1,1 @@
-qnub's pesonal blog on pelican
+qnub's personal blog on pelican
