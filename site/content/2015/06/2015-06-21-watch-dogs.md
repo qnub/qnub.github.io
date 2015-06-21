@@ -1,7 +1,7 @@
 Title: Watch Dogs  
 Date: 2015-06-21 13:30:00
 Category: blog  
-Tags: game, ps4, watch dogs  
+Tags: game, ps4, watch dogs, cyberpunk  
 Author: qnub  
 Image: /images/blog/watch-dogs.jpg
 Slug: 2015-06-21-watch-dogs
