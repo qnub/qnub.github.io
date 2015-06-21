@@ -493,6 +493,7 @@ table {
   padding: 5px 10px;
   margin: 0 5px;
   font-size: 14px;
+  text-transform: uppercase;
 }
 .header__menu-item_active {
   border: 0;

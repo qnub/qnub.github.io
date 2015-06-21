@@ -1,7 +1,7 @@
 Title: Metal Gear Solid V: Ground Zeroes  
 Date: 2015-06-19 12:30:00
-Category: blog  
-Tags: game, ps4, metal gear solid, ground zeroes  
+Category: game  
+Tags: ps4, metal gear solid, ground zeroes  
 Author: qnub  
 Image: /images/blog/mgs-v-gz.jpg
 Slug: 2015-06-19-metal-gear-solid-v-ground-zeroes

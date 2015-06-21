@@ -69,6 +69,8 @@ CATEGORY_MAP = {
     'text': u'текст',
     'blog': u'блог',
     'news': u'новости',
+    'it': u'IT',
+    'game': u'игры',
     'article': u'статьи'
 }
 
