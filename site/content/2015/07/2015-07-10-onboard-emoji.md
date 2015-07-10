@@ -39,5 +39,5 @@ Slug: 2015-07-10-onboard-emoji
 
 Теперь когда нужно где-то вставить смайлик я жму `Ctrl+Super+Space`, тыкаю в появившейся клавиатуре нужную кнопку и нажимаю справа на ней «крест» чтобы эту клавиатуру скрыть… На [гитхабе](https://github.com/googlei18n/noto-emoji) есть сорцы, а также описание как кастомизировать всё это дело. Пулл-реквесты приветствуются!
 
-[гитхаб](https://github.com/googlei18n/noto-emoji)  
+[GitHub](https://github.com/googlei18n/noto-emoji)  
 [архив c emoji раскладкой для **OnBoard**](https://github.com/qnub/onboard-emoji/archive/master.zip)
