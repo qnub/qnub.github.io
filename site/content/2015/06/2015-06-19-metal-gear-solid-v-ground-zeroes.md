@@ -3,7 +3,7 @@ Date: 2015-06-19 12:30:00
 Category: game  
 Tags: ps4, metal gear solid, ground zeroes  
 Author: qnub  
-Image: /images/blog/mgs-v-gz.jpg
+Image: /images/game/mgs-v-gz.jpg
 Slug: 2015-06-19-metal-gear-solid-v-ground-zeroes
 
 **Metal Gear Solid V: Ground Zeroes** пройден (в 4 часа утра примерно за 2,5 часа)...

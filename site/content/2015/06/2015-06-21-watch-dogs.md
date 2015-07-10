@@ -3,7 +3,7 @@ Date: 2015-06-21 13:30:00
 Category: game  
 Tags: ps4, watch dogs, cyberpunk  
 Author: qnub  
-Image: /images/blog/watch-dogs.jpg
+Image: /images/game/watch-dogs.jpg
 Slug: 2015-06-21-watch-dogs
 
 **Watch Dogs** пройден.
