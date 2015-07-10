@@ -6,7 +6,7 @@ Author: qnub
 Image: /images/it/onboard-emoji.png
 Slug: 2015-07-10-onboard-emoji
 
-Неконец дошли руки сделать экранную клавиатуру для ввода **«emoji»**.
+Наконец дошли руки сделать экранную клавиатуру для ввода **«emoji»**.
 
 **TL;DR** <https://github.com/qnub/onboard-emoji>
 
