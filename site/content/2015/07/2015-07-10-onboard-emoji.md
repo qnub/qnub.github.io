@@ -6,7 +6,7 @@ Author: qnub
 Image: /images/it/onboard-emoji.png
 Slug: 2015-07-10-onboard-emoji
 
-Неконец дошли руки сделать экранную клавиатуру для ввода «emoji».
+Неконец дошли руки сделать экранную клавиатуру для ввода **«emoji»**.
 
 **TL;DR** <https://github.com/qnub/onboard-emoji>
 
@@ -38,3 +38,6 @@ Slug: 2015-07-10-onboard-emoji
 ![onboard hotkey]({filename}/images/it/onboard-hotkey.png)
 
 Теперь когда нужно где-то вставить смайлик я жму `Ctrl+Super+Space`, тыкаю в появившейся клавиатуре нужную кнопку и нажимаю справа на ней «крест» чтобы эту клавиатуру скрыть… На [гитхабе](https://github.com/googlei18n/noto-emoji) есть сорцы, а также описание как кастомизировать всё это дело. Пулл-реквесты приветствуются!
+
+[гитхаб](https://github.com/googlei18n/noto-emoji)  
+[архив c emoji раскладкой для **OnBoard**](https://github.com/qnub/onboard-emoji/archive/master.zip)
