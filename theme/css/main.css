@@ -693,6 +693,9 @@ table {
 .sidebar__socials-link_twch {
   background-position: -265px -60px;
 }
+.sidebar__socials-link_tg {
+  background-position: -295px -60px;
+}
 .sidebar__donate {
   margin: 10px 0 0 0;
   padding: 0;
