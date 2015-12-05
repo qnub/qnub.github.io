@@ -11,7 +11,7 @@ Slug: 2015-12-05-letsencrypt-nginx-autorenew
 
 В один сертификат можно вписать 2 домена.
 
-Для начала нужно клонировать репозиторий с утилитой `letencrypt`:
+Для начала нужно клонировать репозиторий с утилитой `letsencrypt`:
 
     git clone https://github.com/letsencrypt/letsencrypt
 
