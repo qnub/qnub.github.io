@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>qnub's blog</title><link>http://qnub.me/</link><description></description><atom:link href="http://qnub.me/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 05 Dec 2015 18:00:00 +0600</lastBuildDate><image><title>qnub's blog</title><url>http://qnub.me/favicon.png</url><link>http://qnub.me</link></image><item><title>Автообновление сертификатов Let’s Encrypt для Nginx</title><link>http://qnub.me/2015/12/2015-12-05-letsencrypt-nginx-autorenew.html</link><description>&lt;img alt="Автообновление сертификатов Let’s Encrypt для Nginx" src="http://qnub.me/images/it/letsencrypt.png"/&gt;&lt;br/&gt;&lt;p&gt;&lt;a href="https://letsencrypt.org/"&gt;Let&amp;#8217;s Encrypt&lt;/a&gt; перешёл в стадию публичной беты, а значит каждый может заполучить себе халявные &lt;span class="caps"&gt;SSL&lt;/span&gt; сертификаты для веба. Одно но — пока они очень короткоиграющие (3 месяца) потому рекомендуется замутить себе их автообновление раз в 2&amp;nbsp;месяца.&lt;/p&gt;
 &lt;p&gt;В один сертификат можно вписать 2&amp;nbsp;домена.&lt;/p&gt;
-&lt;p&gt;Для начала нужно клонировать репозиторий с утилитой &lt;code&gt;letencrypt&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;Для начала нужно клонировать репозиторий с утилитой &lt;code&gt;letsencrypt&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/letsencrypt/letsencrypt
 &lt;/pre&gt;&lt;/div&gt;
 
