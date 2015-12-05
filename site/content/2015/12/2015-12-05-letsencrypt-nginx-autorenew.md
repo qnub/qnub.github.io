@@ -9,7 +9,7 @@ Slug: 2015-12-05-letsencrypt-nginx-autorenew
 
 [Let's Encrypt](https://letsencrypt.org/) перешёл в стадию публичной беты, а значит каждый может заполучить себе халявные SSL сертификаты для веба. Одно но — пока они очень короткоиграющие (3 месяца) потому рекомендуется замутить себе их автообновление раз в 2 месяца.
 
-В один сертификат можно вписать 2 домена.
+В один сертификат можно вписать 2 домена. На домен вторго уровня можно получить сертификаты только на 2 домена. Другими словами на каждый домен второго уровня можно сделать халявное шифрование для него самого и одного поддомена или для 2х поддоменов, но не для него самого… Про большую вложенность не знаю, как и про *«wildcard»* домены. Надеюсь будут позже.
 
 Для начала нужно клонировать репозиторий с утилитой `letsencrypt`:
 
@@ -33,6 +33,9 @@ Slug: 2015-12-05-letsencrypt-nginx-autorenew
 
 Остаётся в настройках домена `nginx` прописать что-то вроде:
 
+    listen [::]:443 ssl spdy;
+    listen 443 ssl spdy; # we enable SPDY here
+
     ssl on;
 
     ssl_certificate /etc/letsencrypt/live/<full_domain_name>/cert.pem;
@@ -49,5 +52,17 @@ Slug: 2015-12-05-letsencrypt-nginx-autorenew
     ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK';
 
 Не забывая заменить в путях `<full_domain_name>` на имя домена использованного в перменной `$MAIN_DOMAIN` скрипта автообновления.
+
+Ну и можно сделать редирект с `http` на `https`:
+
+    server {
+        server_name <domain_name>;
+
+        location / {
+            rewrite     ^ https://$server_name$request_uri? permanent;
+        }
+    }
+
+`<domain_name>` — имя домена для редиректа. Собственно конфиги (и редиректы) `nginx` надо не забыть обновить во всех файлах (если ваши домены в разных файлах). Если у вас нет не зашифрованных серверов — имеет смысл указать редирект на дефолтном сервере…
 
 В данный момент этот скрипт и сертификаты я уже спользую в своих сайтах, в том числе <https://www.registr.xyz>.
