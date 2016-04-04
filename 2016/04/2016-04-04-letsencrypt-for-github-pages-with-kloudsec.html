@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="window" lang="ru_ru" prefix="ya: https://webmaster.yandex.ru/vocabularies/" prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website# " >
+<html class="window" lang="ru_ru" prefix="ya: https://webmaster.yandex.ru/vocabularies/" prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website# article: http://ogp.me/ns/article#" >
     <head>
-            <meta charset="utf-8">
-            <title>qnub's blog - Authors</title>
+              <meta charset="utf-8">
+            <title>qnub's blog &middot; Let’s Encrypt для сайта на GitHub pages через Kloudsec</title>
             <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
             <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|Noto+Serif:400,700,400italic,700italic|PT+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
             <link rel="stylesheet" href="http://qnub.me/theme/css/main.css"/>
@@ -13,10 +13,33 @@
 
 
                 <link href="http://qnub.me/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="qnub's blog полный RSS Feed" />
+                <link href="http://qnub.me/feeds/it.rss.xml" type="application/rss+xml" rel="alternate" title="qnub's blog RSS Feed раздела &quot;IT&quot;" />
             <meta property="og:site_name" content="qnub's blog" />
             <meta property="og:locale" content="ru_ru" />
-                <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="https://www.facebook.com/pages/gikme/137607762942824" />
+            <meta property="article:tag" content="ssl" />
+            <meta property="article:tag" content="https" />
+            <meta property="article:tag" content="letsencrypt" />
+            <meta property="article:tag" content="github" />
+            <meta property="article:tag" content="kloudsec" />
+            <meta property="article:tag" content="cdn" />
 
+
+  <link href='http://qnub.me/2016/04/2016-04-04-letsencrypt-for-github-pages-with-kloudsec.html' rel='canonical'/>
+
+    <meta name="description" contents="Удивительный мир IT, онлайна и опенсорса. Опенсорс правда тут постольку-поскольку скорее GitHub как бесплатная общага для большинства опенсорс проектов. В общем жил я не тужил, никого не трогал и тут ..." />
+    <meta property="og:description" content="Удивительный мир IT, онлайна и опенсорса. Опенсорс правда тут постольку-поскольку скорее GitHub как бесплатная общага для большинства опенсорс проектов. В общем жил я не тужил, никого не трогал и тут ..." />
+
+    <meta name="tags" contents="ssl" />
+    <meta name="tags" contents="https" />
+    <meta name="tags" contents="letsencrypt" />
+    <meta name="tags" contents="github" />
+    <meta name="tags" contents="kloudsec" />
+    <meta name="tags" contents="cdn" />
+    <meta property="og:title" content="Let’s Encrypt для сайта на GitHub pages через Kloudsec" />
+      <meta property="og:image" content="http://qnub.me/images/it/kloudsec.png" />
+  <meta property="og:url" content="http://qnub.me/2016/04/2016-04-04-letsencrypt-for-github-pages-with-kloudsec.html" />
     </head>
     <body class="page">
 
@@ -31,7 +54,7 @@
                             class="header__menu-item ">Игры</a>
                         <a
                             href="http://qnub.me/category/it.html"
-                            class="header__menu-item ">It</a>
+                            class="header__menu-item  header__menu-item_active ">It</a>
                 <a
                     href="http://qnub.me/archives.html"
                     class="header__menu-item ">Архив</a>
@@ -45,10 +68,72 @@
         </header>
 
         <div class="container cf">
-            <main class="content">    <h1>Authors on qnub's blog</h1>
+            <main class="content"><article class="article">
+	<header class="article__header">
+<h1 class="article__title">
+	            <a  class="article__link" href="http://qnub.me/2016/04/2016-04-04-letsencrypt-for-github-pages-with-kloudsec.html" rel="bookmark" title="Permanent Link to &quot;Let&#8217;s Encrypt для сайта на GitHub pages через&nbsp;Kloudsec&quot;">Let&#8217;s Encrypt для сайта на GitHub pages через&nbsp;Kloudsec</a>
+	        </h1>
 
-    <ul>        <li><a href="http://qnub.me/author/qnub.html">qnub</a> (10)</li>
-    </ul>
+		<time class="article__date">04 апр.</time>
+	</header>
+	<section class="article__content cf">
+<div class="article__image-wrapper">
+		        <img class="article__image" src="http://qnub.me/images/it/kloudsec.png" alt="Let&#8217;s Encrypt для сайта на GitHub pages через&nbsp;Kloudsec"/>
+		    </div>
+<p>Удивительный мир <span class="caps">IT</span>, онлайна и опенсорса. Опенсорс правда тут 
+постольку-поскольку скорее GitHub как бесплатная общага для большинства 
+опенсорс проектов. В общем жил я не тужил, никого не трогал и тут
+приходит мне письмо от чувака по имени Steven Goh который говорит, что
+является <span class="caps">CEO</span> проекта <a href="https://www.kloudsec.com/">Kloudsec</a> и что
+он заметил у меня сайт, размещённый на GitHub и использующий собственный
+домен. И мол он предлагает мне потестить их сервис, который может
+дать этому сайту <code>https</code>.</p>
+<p>Мне стало интеерсно, т.к. я уже задумывался о том что в мире где скоро
+не останется <code>http</code> стайты на гитхабе без <code>SSL</code> будут выглядеть странно.
+<strong>Kloudsec</strong> генерирует сертификат для сайта на всё том же 
+<a href="https://letsencrypt.org/">Let&#8217;s Encrypt</a>. Кстати, я разобрался с
+конфигурацией <strong>Nginx</strong> для использования их сертификатов, чтобы клиенты
+не ругались: <a href="https://gist.github.com/qnub/65c9c33e11181f48abf3">https://gist.github.com/qnub/65c9c33e11181f48abf3</a>.</p>
+<p>В общем я залез в сервис и прикрутил это дело к нашему 
+<a href="https://gik.me">gik.me</a>. Всё оказалось очень просто. Нужно настроить
+<span class="caps">DNS</span> на их сервера и они остальное делают сами — в дашборде просто
+переключаешь опции. Вообще у них есть и платные тарифы но для себя я в
+них необходимости не увидел. Да и сам <code>SSL</code> как бы тут тоже не 
+полноценный — он шифрует соединение от клиента до их сервера. Между их
+сервером и вашим (в нашем случае гитхабом) соединение всё ещё не&nbsp;защищено.</p>
+<p>Но у них есть другие достоинства — <span class="caps">CDN</span>. Т.е. они берут контент с гитхаба
+и кладут в свой <span class="caps">CDN</span>. Сайт стал ощутимо быстрее&nbsp;открываться!</p>
+<p><img alt="atom font config" src="http://qnub.me/images/it/kloudsec-price.png" /></p>
+<p>Как видно из калькулятора есть ещё несколько&nbsp;фишек.</p>
+</section>
+	<footer class="article__footer">
+		<div class="article__meta">опубликовано 17:00&nbsp;&middot;&nbsp;IT            <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><span class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,gplus,pinterest,odnoklassniki,moimir,surfingbird,evernote" data-yashareTheme="counter" data-yashareImage="http://qnub.me/images/it/kloudsec.png"></span>
+</div><ul class="article__tags"><li class="article__tags-item">
+						<a href="http://qnub.me/tag/ssl.html" class="article__tags-link link">ssl</a>
+					</li><li class="article__tags-item">
+						<a href="http://qnub.me/tag/https.html" class="article__tags-link link">https</a>
+					</li><li class="article__tags-item">
+						<a href="http://qnub.me/tag/letsencrypt.html" class="article__tags-link link">letsencrypt</a>
+					</li><li class="article__tags-item">
+						<a href="http://qnub.me/tag/github.html" class="article__tags-link link">github</a>
+					</li><li class="article__tags-item">
+						<a href="http://qnub.me/tag/kloudsec.html" class="article__tags-link link">kloudsec</a>
+					</li><li class="article__tags-item">
+						<a href="http://qnub.me/tag/cdn.html" class="article__tags-link link">cdn</a>
+					</li>	        </ul>	</footer>
+</article>
+  <div class="comments" id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'qnub';
+    var disqus_identifier = '2016/04/2016-04-04-letsencrypt-for-github-pages-with-kloudsec.html';
+    var disqus_url = 'http://qnub.me/2016/04/2016-04-04-letsencrypt-for-github-pages-with-kloudsec.html';
+    (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//qnub.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the comments.</noscript>
             </main>
 
             <aside class="sidebar">

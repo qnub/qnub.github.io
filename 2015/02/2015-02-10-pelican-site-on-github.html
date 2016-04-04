@@ -68,7 +68,7 @@
 	            <a  class="article__link" href="http://qnub.me/2015/02/2015-02-10-pelican-site-on-github.html" rel="bookmark" title="Permanent Link to &quot;Бесплатный хостинг на GitHub блога, сгенерированного&nbsp;Pelican&quot;">Бесплатный хостинг на GitHub блога, сгенерированного&nbsp;Pelican</a>
 	        </h1>
 
-		<time class="article__date">10 фев</time>
+		<time class="article__date">10 февр.</time>
 	</header>
 	<section class="article__content cf">
 <div class="article__image-wrapper">
@@ -77,37 +77,37 @@
 <p>Исходник этого самого блога можно найти на <a href="https://github.com/qnub/qnub.github.io/tree/master">GitHub</a>. Здесь немного модифицирован <code>Makefile</code> для поддержки <code>virtualenv</code> находящегося в каталоге <code>.env</code> в каталоге с, собственно, <code>git</code> самого сайта. Тема разработана <a href="https://github.com/temapavloff">temapavloff</a>, а дизайн <a href="https://ru.linkedin.com/in/yahujik/ru">yahujik</a>. И то и другое немного изменено и, и то и другое в оригинале используется в нашем совместном проекте <a href="http://gik.me">gik.me подкаст</a>.</p>
 <p>Я добавил обственную версию генератора <span class="caps">RSS</span> который поддерживает мультимедиа аттачи (для подкаста) и в самой теме активно используются мета-данные из статей для генерации правильных <a href="http://ogp.me/">Open Graph</a>&nbsp;тегов.</p>
 <p>Дополнительные опции в конфигурации <strong>Pelican</strong>:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">filters</span> <span class="kn">import</span> <span class="n">cat_name</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">filters</span> <span class="kn">import</span> <span class="n">cat_name</span>
 
 <span class="n">JINJA_FILTERS</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;cat_name&#39;</span><span class="p">:</span> <span class="n">cat_name</span><span class="p">,</span>  <span class="c"># позволяет выводить в темплейте руссифицированные имена категорий</span>
+    <span class="s1">&#39;cat_name&#39;</span><span class="p">:</span> <span class="n">cat_name</span><span class="p">,</span>  <span class="c1"># позволяет выводить в темплейте руссифицированные имена категорий</span>
 <span class="p">}</span>
 
-<span class="c"># карта преобразования имён категорий для вышеприведённого фильтра</span>
+<span class="c1"># карта преобразования имён категорий для вышеприведённого фильтра</span>
 <span class="n">CATEGORY_MAP</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;link&#39;</span><span class="p">:</span> <span class="s">u&#39;ссылки&#39;</span><span class="p">,</span>
-    <span class="s">&#39;quote&#39;</span><span class="p">:</span> <span class="s">u&#39;цитаты&#39;</span><span class="p">,</span>
-    <span class="s">&#39;text&#39;</span><span class="p">:</span> <span class="s">u&#39;текст&#39;</span><span class="p">,</span>
-    <span class="s">&#39;blog&#39;</span><span class="p">:</span> <span class="s">u&#39;блог&#39;</span><span class="p">,</span>
-    <span class="s">&#39;news&#39;</span><span class="p">:</span> <span class="s">u&#39;новости&#39;</span><span class="p">,</span>
-    <span class="s">&#39;article&#39;</span><span class="p">:</span> <span class="s">u&#39;статьи&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;link&#39;</span><span class="p">:</span> <span class="s1">u&#39;ссылки&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;quote&#39;</span><span class="p">:</span> <span class="s1">u&#39;цитаты&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">u&#39;текст&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;blog&#39;</span><span class="p">:</span> <span class="s1">u&#39;блог&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;news&#39;</span><span class="p">:</span> <span class="s1">u&#39;новости&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;article&#39;</span><span class="p">:</span> <span class="s1">u&#39;статьи&#39;</span><span class="p">,</span>
 <span class="p">}</span>
 
-<span class="c"># перенос в корень сайта нужных статических файлов при генерации</span>
-<span class="c"># CNAME содержит собственный домен сайта для использования с GitHub Pages</span>
-<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;images&#39;</span><span class="p">,</span> <span class="s">&#39;extra/robots.txt&#39;</span><span class="p">,</span> <span class="s">&#39;extra/favicon.png&#39;</span><span class="p">,</span> <span class="s">&#39;extra/favicon.ico&#39;</span><span class="p">,</span> <span class="s">&#39;extra/CNAME&#39;</span><span class="p">]</span>
+<span class="c1"># перенос в корень сайта нужных статических файлов при генерации</span>
+<span class="c1"># CNAME содержит собственный домен сайта для использования с GitHub Pages</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/favicon.png&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/favicon.ico&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
 <span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;robots.txt&#39;</span><span class="p">},</span>
-    <span class="s">&#39;extra/favicon.ico&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;favicon.ico&#39;</span><span class="p">},</span>
-    <span class="s">&#39;extra/favicon.png&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;favicon.png&#39;</span><span class="p">},</span>
-    <span class="s">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s">&#39;path&#39;</span><span class="p">:</span> <span class="s">&#39;CNAME&#39;</span><span class="p">},</span>
+    <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;robots.txt&#39;</span><span class="p">},</span>
+    <span class="s1">&#39;extra/favicon.ico&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;favicon.ico&#39;</span><span class="p">},</span>
+    <span class="s1">&#39;extra/favicon.png&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;favicon.png&#39;</span><span class="p">},</span>
+    <span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">},</span>
 <span class="p">}</span>
 
-<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;feeds_with_media&#39;</span><span class="p">,</span> <span class="p">]</span>  <span class="c"># сосбтвенно плагин, герерирующий более правильный RSS</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;feeds_with_media&#39;</span><span class="p">,</span> <span class="p">]</span>  <span class="c1"># сосбтвенно плагин, герерирующий более правильный RSS</span>
 
-<span class="c"># дополнительные данные для вышеприведённого плагина</span>
-<span class="n">FEED_IMAGE</span> <span class="o">=</span> <span class="s">&#39;/favicon.png&#39;</span>  <span class="c"># картинка фида</span>
-<span class="n">FEED_FOOTER</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>  <span class="c"># футер с копирайтом добавляется если пост в фиде содержит медиа-вложение</span>
+<span class="c1"># дополнительные данные для вышеприведённого плагина</span>
+<span class="n">FEED_IMAGE</span> <span class="o">=</span> <span class="s1">&#39;/favicon.png&#39;</span>  <span class="c1"># картинка фида</span>
+<span class="n">FEED_FOOTER</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>  <span class="c1"># футер с копирайтом добавляется если пост в фиде содержит медиа-вложение</span>
 </pre></div>
 
 
@@ -194,6 +194,9 @@
             <a href="http://qnub.me/tag/angular.html" class="article__tags-link link">angular</a>
         </li>
         <li class="article__tags-item">
+            <a href="http://qnub.me/tag/cdn.html" class="article__tags-link link">cdn</a>
+        </li>
+        <li class="article__tags-item">
             <a href="http://qnub.me/tag/cyberpunk.html" class="article__tags-link link">cyberpunk</a>
         </li>
         <li class="article__tags-item">
@@ -213,6 +216,9 @@
         </li>
         <li class="article__tags-item">
             <a href="http://qnub.me/tag/keyboard.html" class="article__tags-link link">keyboard</a>
+        </li>
+        <li class="article__tags-item">
+            <a href="http://qnub.me/tag/kloudsec.html" class="article__tags-link link">kloudsec</a>
         </li>
         <li class="article__tags-item">
             <a href="http://qnub.me/tag/letsencrypt.html" class="article__tags-link link">letsencrypt</a>
